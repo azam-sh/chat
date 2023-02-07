@@ -1,0 +1,328 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+}
+
+.main {
+  display: flex;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgb(54, 51, 51);
+  width: 15%;
+  padding: 10px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.chat-section {
+  min-height: 100vh;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-section {
+  height: 7%;
+  width: 100%;
+}
+
+.input-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+  border-bottom: 1px solid rgba(182, 179, 179, 0.442);
+}
+
+.contact:hover {
+  color: red;
+}
+
+.contact-name {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.contact-lastname {
+  font-size: 16px;
+}
+
+.header {
+  height: 10%;
+  width: 100%;
+  background-color: rgb(54, 51, 51);
+  color: #fff;
+  border-left: 1px solid rgba(182, 179, 179, 0.442);
+}
+
+.header-contact {
+  display: flex;
+  min-height: 100%;
+  align-items: center;
+  padding: 10px;
+}
+
+.header-contact-name {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.header-contact-lastname {
+  font-size: 18px;
+}
+
+.header-contact-img {
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-image: url("../public/chat-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  height: 83%;
+  width: 100%;
+}
+
+.message-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.message-content {
+  max-width: 90%;
+  min-width: 90%;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.message-avatar {
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.message-input {
+  width: 92%;
+  height: 100%;
+  background-color: rgb(54, 51, 51);
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid rgba(182, 179, 179, 0.442);
+  outline: none;
+}
+
+.message-input:focus {
+  border: 2px solid rgba(207, 35, 35, 0.736);
+}
+
+.message-button {
+  width: 8%;
+  height: 100%;
+  background-color: rgb(54, 51, 51);
+  color: #fff;
+  border: none;
+}
+
+.message-button:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.message-button:disabled:hover {
+  color: #fff;
+  cursor: auto;
+}
+
+.reset-btn {
+  margin-top: auto;
+  width: 200px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  color: red;
+  border-color: red;
+}
+
+.modal {
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  width: 450px;
+  height: 80px;
+  top: 40%;
+  left: 40%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 5px 5px rgb(52, 51, 51);
+}
+
+.personal-info-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.personal-info-btn:hover {
+  color: red;
+  border-color: red;
+}
+
+.personal-info-section {
+  color: #fff;
+}
+
+.personal-info {
+  display: flex;
+  align-items: center;
+}
+
+.personal-name {
+  font-size: 16px;
+}
+
+.personal-avatar {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.login-page {
+  background-image: url("../public/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 12%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.247);
+  max-height: 200px;
+  min-height: 200px;
+  max-width: 400px;
+  min-width: 400px;
+  justify-content: center;
+  padding: 30px 30px;
+  border-radius: 20px;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 15px;
+  margin: 15px auto 0 auto;
+  transition: all 0.2s ease;
+}
+.login-btn:hover {
+  transform: scale(1.05);
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.login-input {
+  height: 35px;
+  border-radius: 10px;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: transparent;
+}
